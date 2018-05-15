@@ -1,7 +1,7 @@
 function guessinggame {
 	echo "Type in the number of files in the current directory and press Enter:"
 	read response
-	number_of_files=$(ls -1q * | wc -l)
+	number_of_files=$(ls -A | wc -l)
 	while [[ $number_of_files -ne $response ]]
 	do
 		if [[ $number_of_files -gt $response ]]
